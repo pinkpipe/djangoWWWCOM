@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.-mouse-parallax__background {
+    position: absolute;
+    z-index: -2;
+    background: url("img/back_kent.PNG") rgb(23,23,23);
+    background-size: cover;
+    width: 103%;
+    height: 104%;
+    top: -10px;
+    left: -10px;
+}
+
+.-mouse-parallax__blur {
+    top: -10px;
+    left: -10px;
+    position: absolute;
+    z-index: -1;
+    /*background: rgba(0, 0, 0, 0.1); !* Немного затемненный фон для эффекта *!*/
+    width: 103%;
+    height: 104%;
+    backdrop-filter: blur(0px); /* Начальное значение размытия */
+    /*transition: backdrop-filter 0.1s ease-out;*/
+    will-change: backdrop-filter;
+}
+
+.container-block {
+    z-index: 1;
+    /*top: 0;*/
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 35vw 30vw 35vw;
+}
+
+.mouse-parallax {
+    position: relative;
+    display: flex;
+}
+
+label {
+    color: white;
+    font-size: 40px;
+    font-family: "Pixelify Sans", serif;
+
+
+}
+
+.form-block {
+    margin-top: 60%;
+    padding: 0 20px;
+
+}
+
+.form-auth-block {
+    width: 100%;
+    height: 97.8%;
+    background-color: rgb(56, 56, 56);
+    border-radius: 10px;
+    position: relative;
+}
+
+.input-block {
+    margin-bottom: 1rem;
+}
+
+.input-block > label, .input-block > input {
+    width: 95%;
+}
+
+input {
+    outline: none;
+    border: 2px solid rgba(255, 106, 0, 0.7);
+    border-radius: 10px;
+    background-color: rgb(23,23,23);
+    padding: 0.2rem 0.5rem;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    font-family: "Pixelify Sans", serif;
+    transition: box-shadow 0.5s;
+    margin-top: 10px;
+}
+
+input:focus {
+    box-shadow: 0 0 20px 10px rgba(255, 106, 0, 0.81);
+}
+
+.btn-block {
+    text-align: center;
+}
+
+.btn_in {
+    background-color: rgb(23,23,23);
+    color: aliceblue;
+    font-family: "Pixelify Sans", serif;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.btn_in:hover {
+    background-color: rgba(255, 106, 0, 0.7);
+    transform: translateY(-2px);
+}
+
+.btn_in:active {
+    transform: translateY(0);
+}
+
+.img-block {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 50%;
+    top: 18%;
+    transform: translate(-50%, -50%);
+}
+
+.center-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.text-block {
+    margin-top: 50%;
+    text-align: center;
+}
+
+.p_auth {
+    font-family: "Source Code Pro", serif;
+    color: white;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.p_auth-reg {
+    font-family: "Source Code Pro", serif;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease-out;
+}
+
+.p_auth-reg:hover {
+    /*color: rgb(255,106,0,0.7);*/
+    text-shadow: 0 0 15px rgb(255, 106, 0);
+}
+
+.btn_share {
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: inherit;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.img_share {
+    width: 25px;
+    height: 25px;
+    padding: 8px 0;
+}
+
+.btn_share-block {
+    position: absolute;
+    transition: opacity 0.3s ease-out;
+    left: 20px;
+    bottom: 25px;
+}
+
+.btn_share-block:hover {
+    opacity: 50%;
+}
+
+.btn_share-block.active {
+    opacity: 0.5;
+}
+
+.btn_share-tg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: inherit;
+    border: none;
+    transition: opacity 0.3s ease-out;
+}
+
+.btn_share-block-tg {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    transform: scale(0.5);
+    left: 30px;
+    bottom: 90px;
+}
+
+.btn_share-block-tg.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.btn_share-tg:hover {
+    opacity: 0.5;
+}
+
+.img_share-tg {
+    width: 70px;
+    height: 70px;
+}
+
+.btn_share-vk {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: inherit;
+    border: none;
+    transition: opacity 0.3s ease-out;
+}
+
+.btn_share-vk:hover {
+    opacity: 0.5;
+}
+
+.btn_share-block-vk {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    transform: scale(0.5);
+    /*transition: opacity 0.3s ease-out;*/
+    left: 80px;
+    bottom: 25px;
+}
+
+.btn_share-block-vk.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.img_share-vk {
+    width: 60px;
+    height: 60px;
+}
+
+
+
+
+
+
