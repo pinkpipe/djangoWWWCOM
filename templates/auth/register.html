@@ -1,10 +1,80 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>REGISTER</title>
+    <link href="{% static 'auth/register.css' %}" rel="stylesheet">
 </head>
 <body>
+    <div class="mouse-parallax">
+        <div class="-mouse-parallax__background"></div>
+        <div class="-mouse-parallax__blur"></div>
+        <div class="container-block">
+            <div class="filler1">
+                <div id="btn_share" class="btn_share-block">
+                    <button class="btn_share" onclick="showBtn()">
+                        <img src="{% static 'auth/img/share_base.png' %}" class="img_share" alt="share--v2">
+                    </button>
+                </div>
+                <div id='btn_tg' class="btn_share-block-tg">
+                    <button class="btn_share-tg">
+                        <img src="{% static 'auth/img/share_tg.png' %}" class="img_share-tg" alt="share--v3">
+                    </button>
+                </div>
+                <div id="btn_vk" class="btn_share-block-vk">
+                    <button class="btn_share-vk">
+                        <img src="{% static 'auth/img/share_vk.png' %}" class="img_share-vk" alt="share--v2">
+                    </button>
+                </div>
+            </div>
 
+            <div class="form-auth-block">
+                <img
+                        src="{% static 'auth/img/kent3.jpg' %}"
+                        alt="Logo"
+                        class="img-block center-image"
+                >
+                <div class="form-block">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="input-block">
+                            <label for="login">Login</label>
+                            <input type="text" id="login" name="login">
+                        </div>
+                        
+                        <div class="input-block">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+
+                        <div class="input-block">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        
+                        <div class="input-block">
+                            <label for="password2">Password</label>
+                            <input type="password" id="password2" name="password2">
+                        </div>
+
+                        <div class="btn-block">
+                            <button class="btn_in" type="submit">Sign Up</button>
+                        </div>
+                        <div class="text-block">
+                            <p class="p_auth">Есть аккаунт?</p>
+                            <a href="{% url 'login' %}" class="p_auth-reg">Авторизоваться</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="filler"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="{% static 'auth/register.js' %}"></script>
 </body>
 </html>

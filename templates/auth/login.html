@@ -36,7 +36,8 @@
                         class="img-block center-image"
                 >
                 <div class="form-block">
-                    <form>
+                    <form method="POST">
+                        {% csrf_token %}
                         <div class="input-block">
                             <label for="login">Login</label>
                             <input type="text" id="login" name="login">
@@ -48,7 +49,7 @@
                         </div>
 
                         <div class="btn-block">
-                            <button class="btn_in">Sign In</button>
+                            <button class="btn_in" type="submit">Sign In</button>
                         </div>
                         <div class="text-block">
                             <p class="p_auth">Нет аккаунта?</p>
