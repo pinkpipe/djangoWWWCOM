@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+body {
+    background-color: rgb(23, 23, 23);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.ul-menu {
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+.ul-menu-block {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    margin: auto;
+}
+
+.img_menu-block {
+    position: absolute;
+    top: 15px;
+    left: 20px
+}
+
+.img_menu {
+    width: 25px;
+    height: 25px;
+    filter: drop-shadow(0 0 10px white);
+}
+
+.menu-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(49, 49, 49);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.avatar_person {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.avatar_person-block {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 2%;
+    left: 2%;
+}
+
+.avatar_person-block h2 {
+    margin-left: 20px;
+    color: white;
+    margin-bottom: 10px;
+    font-family: "Source Code Pro", serif;
+    font-weight: 400;
+}
+
+.a_main {
+    font-family: "Source Code Pro", serif;
+    font-size: 20px;
+
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAIN</title>
+    <link href="{% static 'ind/index.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <div class="img_menu-block">
+            <img 
+                    src="{% static 'ind/img/menu.png' %}"
+                    alt="menu"
+                    class="img_menu"
+            >
+        </div>
+        
+        <div class="menu-block">
+            <div class="avatar_person-block">
+                <img
+                    src="{% static 'ind/img/kent.jpg' %}"
+                    alt="Ava_Person"
+                    class="avatar_person"
+                >
+                <h2>{{ user.username }}</h2>
+            </div>
+            <div class="ul-menu-block">
+                <ul class="ul-menu">
+                    <li>
+                        <a href="" class="a_main">Главная</a>
+                    </li>
+                    <li>
+                        <a href="">CRM</a>
+                    </li>
+                    <li>
+                        <a href="">Чат с ботом</a>
+                    </li>
+                    <li>
+                        <a href="">Настройки</a>
+                    </li>
+                    <li>
+                        <a href="">О нас</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

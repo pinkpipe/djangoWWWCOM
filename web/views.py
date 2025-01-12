@@ -20,6 +20,7 @@ def login_user(request):
                 request.session['user'] =  {
                     'id': user.id,
                     'username': user.username,
+                    'email': user.email,
                 }
                 return redirect('main_base')
             else:
@@ -40,7 +41,7 @@ def log_in_main(request):
         }
     else:
         context = {}
-    return render(request, 'main_base.html', context)
+    return render(request, 'index.html', context)
 
 
 def register_user(request):
