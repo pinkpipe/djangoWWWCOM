@@ -13,23 +13,28 @@ body {
 
 li {
     list-style: none;
-    margin-bottom: 20px;
+    /*margin-bottom: 30px;*/
 }
 
 .ul-menu {
     display: flex;
-    padding-left: 10px;
+    padding-left: 0;
     align-items: center;
     justify-content: center;
     height: 100%;
     flex-direction: column;
-    text-align: left;
+    /*text-align: left;*/
     width: 100%;
+}
+
+.ul-menu li {
+    width: 100%;
+    text-align: left;
 }
 
 .ul-menu-block {
     position: relative;
-    top: 20px;
+    top: 45px;
     width: 100%;
     margin: auto;
 }
@@ -41,35 +46,44 @@ li {
 }
 
 .img_menu {
+    opacity: 0.3;
     width: 25px;
     height: 25px;
-    filter: drop-shadow(0 0 10px white);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+    filter: none;
+}
+
+.img_menu:hover {
+    opacity: 1;
+    /*filter: drop-shadow(0 0 10px white);*/
 }
 
 .menu-block {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -288px;
     width: 20%;
     height: 100%;
     background-color: rgb(49, 49, 49);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    transition: left 0.5s ease;
 }
 
 .avatar_person {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 106, 0, 0.5);
 }
 
 .avatar_person-block {
     display: flex;
     align-items: flex-end;
     position: relative;
-    top: 2%;
-    left: 2%;
+    justify-content: center;
+    top: 3.5%;
+
 }
 
 .avatar_person-block h2 {
@@ -82,6 +96,69 @@ li {
 
 .a_main {
     font-family: "Source Code Pro", serif;
-    font-size: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.5s ease;
+    width: 100%;
+    padding: 20px 0;
+    text-indent: 20px;
+}
+
+.a_main:hover {
+    background-color: rgb(72, 72, 72);
+}
+
+
+
+.rofel {
+    position: absolute;
+    font-family: "Source Code Pro", serif;
+    font-size: 100px;
+    color: white;
+    top: 15%;
+    left: 30%;
+    opacity: 0.1;
+}
+
+
+.logout-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 190px;
+}
+
+.logout_img {
+    width: 50px;
+    height: 50px;
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+}
+
+.logout_img:hover {
+    opacity: 1;
+}
+
+.modal {
+    display: none; /* Скрыть окно по умолчанию */
+    position: fixed; /* Фиксированное положение */
+    z-index: 1; /* Поверх всего остального */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(255, 145, 0, 0.55); /* Полупрозрачный фон */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+}
+
+.modal.show {
+    opacity: 1;
 
 }

@@ -72,6 +72,11 @@ def register_user(request):
     return render(request, 'auth/register.html')
 
 
-
+def logout_user(request):
+    if 'user' in request.session:
+        del request.session['user']
+    else:
+        pass
+    return redirect('login')
 
 

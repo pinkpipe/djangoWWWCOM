@@ -9,14 +9,18 @@
 <body>
     <div>
         <div class="img_menu-block">
-            <img 
-                    src="{% static 'ind/img/menu.png' %}"
-                    alt="menu"
-                    class="img_menu"
-            >
+            <a>
+
+                <img
+                        src="{% static 'ind/img/menu.png' %}"
+                        alt="menu"
+                        class="img_menu"
+                        onclick="openMenu()"
+                >
+            </a>
         </div>
-        
-        <div class="menu-block">
+
+        <div class="menu-block" id="ModalMenu">
             <div class="avatar_person-block">
                 <img
                     src="{% static 'ind/img/kent.jpg' %}"
@@ -25,26 +29,44 @@
                 >
                 <h2>{{ user.username }}</h2>
             </div>
+
             <div class="ul-menu-block">
                 <ul class="ul-menu">
                     <li>
                         <a href="" class="a_main">Главная</a>
                     </li>
                     <li>
-                        <a href="">CRM</a>
+                        <a href="" class="a_main">CRM</a>
                     </li>
                     <li>
-                        <a href="">Чат с ботом</a>
+                        <a href="" class="a_main">Чат с ботом</a>
                     </li>
                     <li>
-                        <a href="">Настройки</a>
+                        <a href="" class="a_main">Настройки</a>
                     </li>
                     <li>
-                        <a href="">О нас</a>
+                        <a href="" class="a_main">О нас</a>
                     </li>
                 </ul>
+
+                <div class="logout-block">
+                    <a href="/logout/">
+                        <img
+                            src="{% static 'ind/img/logout_ico.png' %}"
+                            alt="log_out"
+                            class="logout_img"
+                        >
+                    </a>
+                </div>
             </div>
         </div>
+
+        <div class="modal" id="myModal"></div>
+
+        <div class="rofel">
+            <h1>П*ЗДА</h1>
+        </div>
     </div>
+<script src="{% static 'ind/index.js' %}"></script>
 </body>
 </html>
